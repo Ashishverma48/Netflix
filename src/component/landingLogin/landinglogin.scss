@@ -1,0 +1,54 @@
+@import '../../mixins.scss';
+.emailLogin{
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    font-family: 'Roboto';
+    @include md{
+        flex-direction: row;
+        width: 100%;
+    }
+    button{
+        
+        font-weight: 700;
+        color: white;
+        background-color: red;
+        border-radius: 5px;
+        padding: .8rem 1rem ;
+        border: 0;
+        font-size: 1.2rem;
+
+        transition: .1s ease-in-out;
+        &:hover{
+            background-color: rgba(255, 0, 0, 0.776);
+        }
+        @include md{
+            
+            // margin-left: 1rem ;
+            padding: .8rem 1rem ;
+            width: 30%;
+        }
+
+    }
+        
+        input{
+            padding: 1rem;
+            width: 100%;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.409);
+            &::placeholder{
+                font-size: 1.1rem;
+                color: white;
+            }
+            &:focus{
+                outline: white solid 2px;
+
+            }
+            @include md{
+                width: 65%;
+            }
+        }
+}
