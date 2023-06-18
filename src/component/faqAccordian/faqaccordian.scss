@@ -1,0 +1,38 @@
+.accordian{
+    
+}
+.accordian>:nth-child(1){
+    margin-top: 10px;
+    width: 100%;
+    background-color:
+     
+    #132144 ;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    // padding: 1rem;
+    font-size: 1.5rem;
+    align-items: center;
+    padding:.4rem 1.5rem;
+    
+    &:hover{
+        transition: .2s ease-in;
+        background-color: 
+        #3b5aa8 ;
+    }
+    span{
+        font-size: 3rem;
+    }
+}
+
+.accordianhidecontent{
+    background:
+    #132144 ;
+    margin-top: 2px;
+    overflow: hidden;
+    p{
+        transition: .5s ease-in;
+        padding: 1.5rem;
+        font-size: 1.3rem;
+    }
+}

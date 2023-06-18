@@ -1,0 +1,127 @@
+@import '../../../mixins.scss';
+.login-page{
+    background-image: linear-gradient( to right,rgba(10, 10, 11, 0.628),rgba(0, 0, 0, 0.655),transparent ),url('../../../assests/netflixbanner.jpg');
+    background-size: 132.9%;
+    background-color: #00081d ;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position-x:left ;
+    color:white;  
+    padding:.8rem  2.5rem;
+    img{
+        width: 170px;
+    } 
+}
+
+.login{
+    background-color: #0000008f;
+    display: flex;
+    flex-direction: column;
+    gap: 
+    2rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    @include md{
+        height: 110vh;
+        padding: 3.4rem;
+        width: 40%;
+        margin: auto;
+
+    }
+    button{
+        padding: .9rem 1rem ;
+        font-weight: 600;
+        background-color: red;
+        color: white;
+        border: 0;
+        border-radius: 5px;
+    }
+    &>:nth-last-child(1){
+        
+        font-size: .9rem;
+       font-weight: 100;
+       a{
+        color: rgba(142, 142, 224, 0.858);
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+       }
+    }
+
+    .remember{
+        display: flex;
+        justify-content: space-between;
+        div{
+            display: flex;
+            gap: 10px;
+            input{
+                height: 20px;
+                width: 20px;
+                
+                accent-color: rgb(178, 165, 165);
+            }
+        }
+    }
+
+       
+}
+.username{
+    background: rgba(65, 60, 60, 0.649);
+    border-bottom:  red;
+    color: white;
+    border-radius: 5px;
+    label{
+        padding-left: .4rem;
+        color: rgb(247, 237, 237);
+
+    }
+    input{
+        color: white;
+        padding:.5rem  1rem;
+    }
+}
+
+.login-footer{
+    
+    display: flex;
+    margin-top: 4rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.729);
+    flex-direction: column;
+    gap: 1.4rem;
+    padding-bottom: 3rem;
+    .login-footer-link{
+        
+        @include md{
+
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+        
+        flex-direction: column;
+        
+        div{
+            display: flex;
+            flex-direction: column;
+            a{
+                color: rgba(255, 255, 255, 0.844);
+                margin-top: 1rem;
+            }
+        }
+       
+    }
+    select{
+        
+        padding: .5rem 1rem;
+        background-color: transparent;
+        color: white;
+        width: 50%;
+        @include md{
+            width: 15%;
+
+        }
+    }
+}

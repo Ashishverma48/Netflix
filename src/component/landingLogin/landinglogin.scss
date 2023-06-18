@@ -1,4 +1,10 @@
 @import '../../mixins.scss';
+.email-login-comp{
+  
+    p{
+        margin-bottom: 1rem;
+    }
+}
 .emailLogin{
     // background-color: red;
     display: flex;
@@ -39,6 +45,7 @@
             border: 1px solid white;
             border-radius: 5px;
             background-color: rgba(0, 0, 0, 0.409);
+            color: white;
             &::placeholder{
                 font-size: 1.1rem;
                 color: white;

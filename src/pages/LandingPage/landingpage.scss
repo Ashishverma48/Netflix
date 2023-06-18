@@ -6,7 +6,7 @@
     background-color: #00081d ;
     background-repeat: no-repeat;
     
-    height: 600vmax;
+    // height: 600vmax;
     width: 100%;
     background-position-x:left ;
     color:white;
@@ -92,11 +92,12 @@ nav{
             h1{
 
                 font-size: 4.1rem;
+                font-weight: bolder;
             }
         }
         h1{
             font-size: 3rem;
-            font-family: 1000;
+            font-family: 900;
            
         }
         p{
@@ -110,13 +111,82 @@ nav{
 .mainBannerAds{
     width: 100%;
     padding: 2rem;
-    height: 100vh;
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1.4rem;
     @include md{
+       
         justify-content: space-between;
 
+    }
+}
+
+
+// Faq Main
+.faqMain{
+    padding: 1rem;
+    h1{
+        padding-block:1rem ;
+    }
+    @include md{
+        h1{
+        padding-block: 1rem;
+        font-size: 2.7rem;
+    }
+   }
+}
+
+.email-login-second{
+    padding-block:1.5rem ;
+    padding: 1rem;
+    width: 90%;
+    @include md{
+        width: 60%;
+
+    }
+}
+
+
+// /FOOTER 
+.landing-footer{
+    
+    display: flex;
+    margin-top: 1.3rem;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1.4rem;
+    padding-bottom: 3rem;
+    .footer-link{
+        
+        @include md{
+
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+        
+        flex-direction: column;
+        
+        div{
+            display: flex;
+            flex-direction: column;
+            a{
+                color: rgba(255, 255, 255, 0.844);
+                margin-top: 1rem;
+            }
+        }
+       
+    }
+    select{
+        
+        padding: .5rem 1rem;
+        background-color: transparent;
+        color: white;
+        width: 50%;
+        @include md{
+            width: 15%;
+
+        }
     }
 }
