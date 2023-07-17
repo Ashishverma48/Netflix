@@ -19,7 +19,6 @@ app.get("/data", async (req, res) => {
 app.post('/register',async(req,res)=>{
     userDetails={
         FullName : req.body.FullName,
-        UserName : req.body.UserName,
         Password : req.body.Password,
         Email : req.body.Email,
         MobileNo:req.body.MobileNo
@@ -28,7 +27,7 @@ app.post('/register',async(req,res)=>{
     const database = await dbConnect()
     const collection  = await database.collection('users')
     const  data  = await collection.insertOne(userDetails)
-    console.log(data);
+    
     res.send(data)
 })
 

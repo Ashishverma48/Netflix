@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../assests/netflixlogo.png";
 import BannerAd from "../../component/bannerAd/BannerAd";
 import FaqAccordian from "../../component/faqAccordian/FaqAccordian";
@@ -18,7 +19,7 @@ export default function LandingPage() {
             </option>
             <option value="">Hindi</option>
           </select>
-          <button>Sign In</button>
+          <button><Link to='/login'>Sign In</Link></button>
         </div>
       </nav>
       <section className="aboutbannner">
@@ -62,7 +63,7 @@ export default function LandingPage() {
         <FaqAccordian
           head="How much does Netflix cost ? "
           para1="Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹ 149 to ₹ 649 a month. No extra costs, no contracts."
-          para2=""
+          
         />
         <FaqAccordian
           head="Where can I watch ? "
@@ -72,12 +73,12 @@ export default function LandingPage() {
         <FaqAccordian
           head="How do I cancel ? "
           para1="Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime."
-          para2=""
+         
         />
         <FaqAccordian
           head="What can I watch on Netflix ? "
           para1="Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want."
-          para2=""
+          
         />
         <FaqAccordian
           head="Is NetFlix good for kids ? "
