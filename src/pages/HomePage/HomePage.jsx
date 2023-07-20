@@ -1,8 +1,13 @@
 import React from 'react'
-
+import { HomeBanner } from './HomeBanner/HomeBanner'
+import { OnlyOnNetflix } from './OnlyOnNetflix/OnlyOnNetflix'
+import './style.scss'
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>
+      <HomeBanner/>
+      <OnlyOnNetflix/>
+    </div>
   )
 }
 

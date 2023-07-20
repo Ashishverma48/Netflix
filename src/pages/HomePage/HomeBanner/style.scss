@@ -1,0 +1,95 @@
+@import '../../../mixins.scss';
+
+.heroBanner{
+    width: 100%;
+    height: 450px;
+    background-color: var(--black);
+    position: relative;
+    @include md{
+        height: 700px;
+    }
+    .backdrop-img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .5;
+        .lazy-load-image-background{
+            width: 100%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .opacity-layer{
+        width: 100%;
+        height: 400px;
+        background-image: linear-gradient(180deg,rgba(4,21,45,0) 0%, #04152d 79.17%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .heroBannerContent{
+        position: absolute;
+        max-width: 550px;
+      
+        color: white;
+        display: flex;
+        top: 30%;
+        flex-direction: column;
+        // left: 50px;
+        gap: 1.2rem;
+        @include md{
+            padding-left: 3rem;
+            
+        }
+        .title{
+            font-size: 34px;
+            @include md{
+                font-weight: 500;
+                font-size: 3rem;
+
+            }
+        }
+        .content{
+            line-height: 1.5rem;
+            font-weight: 400;
+        }
+        .play{
+            display: flex;
+            button{
+                padding: .6rem 1.6rem;
+                font-size: 1.24rem;
+                border-radius: 2px;
+            transition: .1s ease-out;
+
+                margin-right:1rem ;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                border: 0;
+            }
+            .homeBannerBtn1{
+
+                background-image: linear-gradient(50deg,rgb(120, 9, 92),rgba(161, 15, 110, 0.59)) ;
+                color: white;
+            }
+            .homeBannerBtn1:hover{
+                background-color: rgba(2, 55, 101, 0.593);
+            }
+            .homeBannerBtn2{
+                background-color: rgba(81, 94, 101, 0.932);
+                color: white;
+                
+            }
+            .homeBannerBtn2:hover{
+                background-color: rgba(240, 248, 255, 0.256);
+            }
+        }
+    }
+
+}
