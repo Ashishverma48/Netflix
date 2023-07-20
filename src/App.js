@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import { getApiConfigrations, getGenres } from "./store/homeSlice";
 import { fetchDataFromApi } from "./utitls/api";
 import { Header } from "./component/header/Header";
+import Details from "./pages/Details/Details";
 
 function App() {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ function App() {
   }, []);
   const fetchApiConfig = () => {
     fetchDataFromApi("/configuration").then((response) => {
-      console.log(response);
+      
       const url = {
         backdrop: response?.images?.secure_base_url + "original",
         poster: response?.images?.secure_base_url + "original",
@@ -32,13 +33,13 @@ function App() {
     });
   };
   const genresCall = async () => {
-    let promise = [];
+    let promises = [];
     let endPoints = ["tv", "movie"];
     let allGenres = {};
     endPoints?.forEach((url) => {
-      promise.push(fetchDataFromApi(`genres/${url}/list`));
+      promises.push(fetchDataFromApi(`/genre/${url}/list`));
     });
-    const data = await Promise.all(promise);
+    const data = await Promise.all(promises);
     console.log(data);
     data?.map(({ genres }) => {
       return genres?.map((item) => (allGenres[item.id] = item));
@@ -54,6 +55,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/home" element={<HomePage />} />
+          <Route path="/:mediaType/:id" element={<Details/>} />
         </Routes>
       </BrowserRouter>
     </div>

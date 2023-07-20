@@ -5,6 +5,8 @@ import Img from "../../../component/lazyImageLoader/Img";
 import './style.scss'
 import { AiFillCaretRight,AiOutlineInfoCircle } from 'react-icons/ai';
 import ContentWrapper from "../../../contentWrapper/ContentWrapper";
+import Genres from "../../../component/genre/Genres";
+import dayjs from "dayjs";
 export const HomeBanner = () => {
 
     const [background,setbackground] = useState('')
@@ -20,7 +22,7 @@ export const HomeBanner = () => {
     },[data])
     
 
-  //  console.log(itemdata);
+
 
    
   //  console.log(background);    
@@ -39,7 +41,8 @@ export const HomeBanner = () => {
         <div className="heroBannerContent">
           <h1 className="title">{!loading && itemdata?.title}</h1>
           <p className="content">{!loading && itemdata?.overview}</p>
-          <p className="content">{!loading && itemdata?.release_date?.slice(0,4)}</p>
+          <p className="content">{dayjs(!loading && itemdata?.release_date).format('D MMM YYYY')}</p>
+          <Genres data={itemdata?.genre_ids}/>
           <div className="play">
             <button className="homeBannerBtn1"> <AiFillCaretRight/> <span>Play</span></button>
             <button className="homeBannerBtn2"> <AiOutlineInfoCircle/> <span>More Info</span></button>

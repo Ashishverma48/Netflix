@@ -1,0 +1,122 @@
+@import "../../../mixins.scss";
+.detailsBanner{
+    width: 100%;
+    padding-top: 100px;
+    background-color: var(--black);
+    @include md{
+        min-height: 700px;
+        margin-bottom: 0;
+        padding-top: 120px;
+    }
+    .backdrop-img{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        overflow: hidden;
+        opacity: .14;
+        .lazy-load-image-background{
+            width: 100%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            
+        }
+
+
+    }
+    .opacity-layer{
+        position: absolute;
+        width: 100%;
+        height: 250px;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(  180deg,
+        rgba(4, 21, 45, 0) 0%,
+        #04152d 79.17%)
+    }
+    .content{
+        // width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @include md{
+            flex-direction: row;
+        }
+        .left{
+            flex-shrink: 0;
+            .posterImage{
+                display: block;
+                width: 100%;
+                border-radius: 10px;
+                @include md{
+                    max-width: 350px;
+                }
+            }
+        }
+        .right{
+            
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+           
+            .title{
+                font-size: 28px;
+                line-height: 40px;
+                @include md{
+                    font-size: 34;
+                    line-height: 44px;
+                }
+            }
+           
+            .subtitle{
+                font-style: italic;
+                font-weight: 400;
+                padding-block:3px;
+            }
+            .trailer{
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                .play{
+                    font-size: 20px;
+                    &:hover{
+                        color: rgba(171, 161, 161, 0.571);
+                        transition: .1s ease-in;
+                    }
+                }
+                
+            }
+            .rating{
+                color: white;
+                max-width: 60px;
+                @include md{
+                    max-width: 80px;
+                }
+                .CircularProgressbar-text{
+                    fill: white;
+                }
+            }
+            .overView{
+                h2{
+                    font-weight: 500;
+                    line-height: 40px;
+                }
+                span{
+                    font-size: 15px;
+                    font-weight: 400;
+                    margin-top: 100px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}

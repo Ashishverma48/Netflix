@@ -83,7 +83,7 @@
 
         }
         .carouselItem{
-            width: 125px;
+            width: 110px;
             @include md{
                 width: calc(25% - 15px);
             }
@@ -97,27 +97,67 @@
             aspect-ratio: 1/1.5;
             background-size: cover;
             display: flex;
+                margin-bottom: 30px;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 10px;
 
-            .lazy-load-image-background{
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                overflow: hidden;
-                border-radius: 10px;
-                img{
-                    height: 100%;
+                .lazy-load-image-background{
                     width: 100%;
-                    object-fit: cover;
-                    object-position: center;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
                 }
-
-            }
-            }
-            }
-            
+                .circleRating{
+                    position: relative;
+                    top: 30px;
+                    height: 40px;
+                    width:40px;
+                    flex-shrink: 0;
+                    background-color: white;
+                    @include md{
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+                .genres{
+                    position: relative;
+                    display: none;
+                    @include md{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: end;
+                    }
+                }
+                
         }
+        .textBlock{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .title{
+                color: rgba(255, 255, 255, 0.875);
+                font-weight: 400;
+                font-size: 1.2rem;
+            }
+            .date{
+                color: rgba(255, 255, 255, 0.761);
+                font-size: 14px;
+            }
+        }
+           
+        }
+            
+    }
        
 }
     

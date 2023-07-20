@@ -2,7 +2,7 @@ import axios from "axios";
 
 const BASE_URL = "https://api.themoviedb.org/3";
 const TMDB_TOKEN = process.env.REACT_APP_TMDB_TOKEN;
-console.log(TMDB_TOKEN);
+
 const headers = {
   Authorization: "bearer " + TMDB_TOKEN,
 };
